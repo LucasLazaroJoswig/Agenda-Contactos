@@ -9,6 +9,14 @@ public class Contacto {
     private String email;
     private String empresa;
 
+    /**
+     *
+     * @param nombre El nombre del Contacto
+     * @param apellidos Los apellidos del contacto
+     * @param telefono El telefono del contacto
+     * @param email El email del contacto
+     * @param empresa La empresa para la que trabaja del contacto
+     */
     public Contacto(String nombre, String apellidos, String telefono, String email, String empresa) {
         super();
         this.nombre = nombre;
@@ -18,6 +26,10 @@ public class Contacto {
         this.empresa = empresa;
     }
 
+
+    /*
+     *Creo los metodos getters and setters de todos los atributos de cada contacto
+     */
     public String getNombre() {
         return nombre;
     }
@@ -57,11 +69,20 @@ public class Contacto {
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
     }
-
+    /**
+     * Devuelve el codigo hash del contacto
+     * @return el codigo hash del contacto
+     */
     @Override
     public int hashCode() {
         return Objects.hash(nombre);
     }
+
+    /**
+     * Comprueba si un contacto es igual a otro basandose en el nombre
+     * @param obj el contacto
+     * @return true si son iguales false si no
+     */
 
     @Override
     public boolean equals(Object obj) {
@@ -75,12 +96,16 @@ public class Contacto {
         return Objects.equals(nombre, other.nombre);
     }
 
+    /**
+     * Devuelve una cadena con toda la info del contacto
+     * @return una cadena con toda la info del contacto
+     */
+
     @Override
     public String toString() {
         return "Contacto Nombre=" + nombre + ", Apellidos=" + apellidos + ", Telefono=" + telefono + ", Email=" + email
                 + ", Empresa=" + empresa + ".\n";
     }
-
 
 
 
