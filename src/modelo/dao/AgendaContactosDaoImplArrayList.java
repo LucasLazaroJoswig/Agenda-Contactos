@@ -4,19 +4,31 @@ import java.util.ArrayList;
 
 import modelo.javabean.Contacto;
 
+/**
+ * Implementada la interface ContactoDao
+ */
 public class AgendaContactosDaoImplArrayList implements ContactoDao {
-
+    /**
+     * atributos de la agenda
+     */
     private ArrayList<Contacto> lista;
     private String nombreAgenda;
 
 
-
+    /**
+     * Constructor de la agenda
+     * @param string
+     * @param nombreAgenda
+     */
     public AgendaContactosDaoImplArrayList(String string, String nombreAgenda) {
         super();
         this.lista = new ArrayList<>();
         this.nombreAgenda = nombreAgenda;
     }
 
+    /**
+     * Metodos Explicados en la interface
+     */
     public boolean altaContacto(Contacto contacto) {
         if (lista.contains(contacto)) {
             return false;
